@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/joakim/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Use antigen
 source $HOME/.zsh/antigen.zsh
@@ -26,4 +26,4 @@ antigen apply
 alias zshconfig="nvim ~/.zshrc"
 alias zshreload="source ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
-alias config='/usr/bin/git --git-dir=/home/joakim/.cfg/ --work-tree=/home/joakim'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'

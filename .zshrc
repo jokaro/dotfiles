@@ -23,7 +23,4 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
 
 # Aliases
-alias zshconfig="nvim ~/.zshrc"
-alias zshreload="source ~/.zshrc"
-alias ohmyzsh="nvim ~/.oh-my-zsh"
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+source $HOME/.zsh/aliases.zsh

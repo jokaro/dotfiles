@@ -1,4 +1,18 @@
-"" General
+" ===========================
+" PLUGINS
+" ===========================
+call plug#begin('~/.vim/plugged')
+
+" Essentials
+Plug 'scrooloose/nerdtree'           " Navigation tree
+
+call plug#end()
+
+" ============================
+" SETTINGS
+" ============================
+
+" General
 set number	" Show line numbers
 set linebreak	" Break lines at word (requires Wrap lines)
 set showbreak=+++	" Wrap-broken line prefix
@@ -17,8 +31,14 @@ set smartindent	" Enable smart-indent
 set smarttab	" Enable smart-tabs
 set softtabstop=4	" Number of spaces per Tab
  
-"" Advanced
+" Advanced
 set ruler	" Show row and column ruler information
  
 set undolevels=1000	" Number of undo levels
 set backspace=indent,eol,start	" Backspace behaviour
+
+" ----------------------------------------------------------------------------
+" NerdTree
+" ----------------------------------------------------------------------------
+let NERDTreeShowHidden=1 " Always show dot files
+let NERDTreeQuitOnOpen=1

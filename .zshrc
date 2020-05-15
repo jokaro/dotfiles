@@ -69,16 +69,13 @@ setopt correct
 # extended globbing (adds ^ and other symbols as wildcards)
 setopt extended_glob
 
+# complete aliases
+compdef config='git'
+setopt complete_aliases
+
 # zmv
 autoload zmv
 alias mmv='noglob zmv -W'
-
-
-
-## Alias
-
-alias ohmyzsh='vsc "$ZSH"'
-alias zshrc='vsc ~/.zshrc'
 
 ## Key bindings
 
@@ -97,11 +94,8 @@ bindkey '^[l' down-case-word
 
 ## Sourcing external files
 
-# make less more friendly for non-text input files, see lesspipe(1)
-[[ -x /usr/bin/lesspipe ]] && eval "$(SHELL=/bin/sh lesspipe)"
-
 # custom aliases
-[[ -f ~/.zsh/aliases ]] && . ~/.zsh/aliases
+[[ -f ~/.zsh/aliases.zsh ]] && . ~/.zsh/aliases.zsh
 
 # custom functions
-[[ -f ~/.zsh/functions ]] && . ~/.zsh/functions
+[[ -f ~/.zsh/functions.zsh ]] && . ~/.zsh/functions.zsh

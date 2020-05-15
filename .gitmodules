@@ -2,8 +2,8 @@
 	path = .zsh/ohmyzsh
 	url = https://github.com/ohmyzsh/ohmyzsh
 [submodule "ohmyzsh-custom/git-prompt.zsh"]
-	path = ohmyzsh-custom/git-prompt.zsh
+	path = .zsh/ohmyzsh-custom/plugins/git-prompt.zsh
 	url = https://github.com/woefe/git-prompt.zsh.git
 [submodule "ohmyzsh-custom/k"]
-	path = ohmyzsh-custom/k
+	path = .zsh/ohmyzsh-custom/plugins/k
 	url = https://github.com/supercrabtree/k.git

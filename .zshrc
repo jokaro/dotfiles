@@ -7,6 +7,9 @@
 export ZSH="$HOME/.zsh/ohmyzsh"
 ZSH_CUSTOM="$HOME/.zsh/ohmyzsh-custom"
 
+# Theme
+ZSH_THEME=robbyrussell
+
 # Uncomment this to disable bi-weekly auto-update checks
 #DISABLE_AUTO_UPDATE="true"
 
@@ -45,6 +48,7 @@ plugins=(
 
 # Don't load Oh My Zsh on TTYs
 #[[ $TTY != /dev/tty* ]] && source "$ZSH/oh-my-zsh.sh"
+source $ZSH/oh-my-zsh.sh
 
 ## User configuration
 

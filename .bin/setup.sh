@@ -28,7 +28,7 @@ fi
 
 if [[ -v usesnap ]]; then
     echo "Installing snapd..."
-    sudo apt install snapd
+    sudo apt install -y snapd
 fi
 
 echo "============================================="
@@ -79,7 +79,7 @@ echo "Installing NeoVim..."
 if [[ -v usesnap ]]; then
     sudo snap install nvim --beta --classic
 else
-    sudo apt install neovim
+    sudo apt install -y neovim
 fi
 
 sudo update-alternatives --install /usr/bin/vi vi $(which nvim) 60
@@ -104,7 +104,7 @@ else
     echo "Installing Go..."
     sudo add-apt-repository ppa:longsleep/golang-backports
     sudo apt update
-    sudo apt install golang-go
+    sudo apt install -y golang-go
 fi
 
 echo "Installing Go tools..."

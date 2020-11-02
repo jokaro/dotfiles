@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [ ! -f ~/.ssh/id_rsa.pub ]; then
     echo "Creating an SSH key for you..."

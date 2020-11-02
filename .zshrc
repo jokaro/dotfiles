@@ -41,6 +41,7 @@ plugins=(
 	docker-compose
 	colorize
 	colored-man-pages
+	gcloud
 	# custom plugins go here
 	git-prompt
 	k

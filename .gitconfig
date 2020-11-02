@@ -1,3 +1,5 @@
 [user]
 	name = Joakim Karlsson
 	email = joakim.karlsson@roxtec.com
+[core]
+	editor = nvim

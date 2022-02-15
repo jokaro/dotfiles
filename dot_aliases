@@ -1,6 +1,9 @@
 # Shortcuts
 alias g="git"
+complete -F _git g
 alias cz='chezmoi'
+complete -F __start_chezmoi cz
+alias -- -='cd -'
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then

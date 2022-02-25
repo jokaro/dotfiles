@@ -1,9 +1,11 @@
 # Shortcuts
 alias g="git"
-complete -F _git g
+complete -o bashdefault -o default -o nospace -F __git_wrap__git_main g
 alias cz='chezmoi'
-complete -F __start_chezmoi cz
+complete -o default -F __start_chezmoi cz
 alias -- -='cd -'
+
+alias sshmd5='ssh-add -l -E sha256'
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then

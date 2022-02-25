@@ -1,4 +1,6 @@
-eval "$(gh completion -s bash)"
+if [ -x "$(command -v gh)" ]; then
+    eval "$(gh completion -s bash)"
+fi
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+printf "Private Key: %s\nPublic Key: %s\nPassphrase: %s\n" \
+  "$(cat ~/.ssh/$1)" "$(cat ~/.ssh/$1.pub)" "$(echo $2)" \
+    | lpass add --non-interactive --sync=now --note-type=ssh-key "SSH/$1"

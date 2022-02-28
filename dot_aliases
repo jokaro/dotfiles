@@ -5,6 +5,11 @@ alias cz='chezmoi'
 complete -o default -F __start_chezmoi cz
 alias -- -='cd -'
 
+if [ -x "$(command -v batcat)" ]; then
+    alias bat=batcat
+fi
+alias b=bat
+
 alias sshmd5='ssh-add -l -E sha256'
 
 # enable color support of ls and also add handy aliases

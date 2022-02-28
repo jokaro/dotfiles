@@ -29,9 +29,9 @@ data.location=~/.task
 #include /usr/share/taskwarrior/solarized-light-256.theme
 #include /usr/share/taskwarrior/no-color.theme
 
-taskd.certificate=\/home\/jki\/.task\/joakim.cert.pem
-taskd.key=\/home\/jki\/.task\/joakim.key.pem
-taskd.ca=\/home\/jki\/.task\/ca.cert.pem
+taskd.certificate={{ .chezmoi.homeDir | replace "/" "\\/" }}\/.task\/joakim.cert.pem
+taskd.key={{ .chezmoi.homeDir | replace "/" "\\/" }}\/.task\/joakim.key.pem
+taskd.ca={{ .chezmoi.homeDir | replace "/" "\\/" }}\/.task\/ca.cert.pem
 taskd.server=home.alloc.io:53589
 taskd.credentials=Alloc\/Joakim\/7e79f0df-e091-4198-b6a4-dff1b7bb5652
 urgency.uda.priority.L.coefficient=-0.5

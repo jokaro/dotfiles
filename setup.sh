@@ -23,6 +23,3 @@ sudo apt install taskwarrior timewarrior
 
 # Install chezmoi
 sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply jokaro
-
-# Setup nb
-nb init git@github.com:jokaro/notes.git --email jocke@alloc.io --name "Joakim Karlsson"

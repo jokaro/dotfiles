@@ -18,8 +18,5 @@ lpass login $1
 # Install starship
 cargo install starship --locked
 
-# Install taskwarrior and timewarrior
-sudo apt install taskwarrior timewarrior
-
 # Install chezmoi
 sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply jokaro

@@ -1,0 +1,7 @@
+[user]
+	name = Joakim Karlsson
+	email = joakim.karlsson@fortnox.se
+[pull]
+	rebase = true
+[core]
+	excludesfile = ~/.gitignore

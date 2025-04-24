@@ -5,3 +5,12 @@
 	rebase = true
 [core]
 	excludesfile = ~/.gitignore
+[diff]
+	tool = nvimdiff
+[merge]
+	tool = nvimdiff
+[mergetool]
+	prompt = false
+	keepBackup = false
+[mergetool "vimdiff"]
+  	layout = "LOCAL,REMOTE / MERGED"

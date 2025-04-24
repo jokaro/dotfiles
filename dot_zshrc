@@ -90,6 +90,7 @@ export PATH="/opt/homebrew/opt/python@3.10/libexec/bin:$PATH"
 export GROOVY_HOME=/opt/homebrew/opt/groovy/libexec
 export CYPRESS_REMOTE_DEBUGGING_PORT=9222
 export GOPATH=$HOME/go
+export GOPRIVATE=*.fnox.se
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # Auto source secrets

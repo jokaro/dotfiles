@@ -38,3 +38,7 @@ vim.keymap.set('n', '<leader>bD', '<cmd>:bd<cr>', { desc = 'Delete Buffer and Wi
 
 -- files
 vim.keymap.set({ 'i', 'x', 'n', 's' }, '<C-s>', '<cmd>w<cr><esc>', { desc = 'Save File' })
+vim.keymap.set({ 'i', 'x', 'n', 's' }, '<C-s>', '<cmd>w<cr><esc>', { desc = 'Save File' })
+
+-- disable default surround using mini.surrond instead
+vim.keymap.set('n', 's', '<Nop>', { desc = 'do nothing' })

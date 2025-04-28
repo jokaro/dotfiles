@@ -1,0 +1,30 @@
+* NeoVim configuration
+** ToDo
+   - (x) Basic LUA
+   - (x) mini
+   -- ( ) Look for more mini plugins
+   - ( ) norg 
+   - ( ) golang
+   -- ( ) LSP
+   -- ( ) Formatting
+   -- ( ) Lint
+   -- ( ) Debug
+   -- ( ) Run configuration
+   -- ( ) Mise
+   - ( ) co-pilot
+   - ( ) java
+   -- ( ) LSP
+   -- ( ) Formatting
+   -- ( ) Lint
+   -- ( ) Debug
+   -- ( ) Run configuration
+   -- ( ) Mise
+   - ( ) typescript
+   -- ( ) LSP
+   -- ( ) Formatting
+   -- ( ) Lint
+   -- ( ) Debug
+   -- ( ) Run configuration
+   -- ( ) Mise
+   - ( ) projects?
+

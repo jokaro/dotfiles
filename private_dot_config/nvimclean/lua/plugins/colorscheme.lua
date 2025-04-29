@@ -5,7 +5,7 @@ return {
     priority = 1000,
     config = function()
       require('catppuccin').setup {
-        flavour = 'mocha', -- mocha, macchiato, frappe, or latte
+        flavour = 'macchiato', -- mocha, macchiato, frappe, or latte
         integrations = {
           aerial = true,
           alpha = true,
@@ -53,7 +53,7 @@ return {
         end,
       }
 
-      vim.cmd.colorscheme 'catppuccin-mocha'
+      vim.cmd.colorscheme 'catppuccin-macchiato'
     end,
     specs = {
       {

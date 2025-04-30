@@ -10,7 +10,7 @@ return {
     -- refer to the configuration section below
     bigfile = { enabled = true },
     dashboard = { enabled = true },
-    explorer = { enabled = true },
+    explorer = { enabled = true, layout = { fullscreen = false } },
     indent = { enabled = true },
     input = { enabled = true },
     picker = {
@@ -46,12 +46,10 @@ return {
     -- Top Pickers & Explorer
     { '<leader><space>', function() Snacks.picker.smart() end, desc = 'Smart Find Files', },
     { '<leader>,', function() Snacks.picker.buffers() end, desc = 'Buffers', },
-    { '<leader>/', function() Snacks.picker.grep() end, desc = 'Grep', },
-    { '<leader>:', function() Snacks.picker.command_history() end, desc = 'Command History', },
     { '<leader>n', function() Snacks.picker.notifications() end, desc = 'Notification History', },
     { '<leader>e', function() Snacks.explorer() end, desc = 'File Explorer', },
     -- find
-    { '<leader>fb', function() Snacks.picker.buffers() end, desc = 'Buffers', },
+    -- { '<leader>fb', function() Snacks.picker.buffers() end, desc = 'Buffers', },
     { '<leader>fc', function() Snacks.picker.files { cwd = vim.fn.stdpath 'config' } end, desc = 'Find Config File', },
     { '<leader>ff', function() Snacks.picker.files() end, desc = 'Find Files', },
     { '<leader>fg', function() Snacks.picker.git_files() end, desc = 'Find Git Files', },
@@ -76,7 +74,6 @@ return {
     { '<leader>s"', function() Snacks.picker.registers() end, desc = 'Registers', },
     { '<leader>s/', function() Snacks.picker.search_history() end, desc = 'Search History', },
     { '<leader>sa', function() Snacks.picker.autocmds() end, desc = 'Autocmds', },
-    { '<leader>sb', function() Snacks.picker.lines() end, desc = 'Buffer Lines', },
     { '<leader>sc', function() Snacks.picker.command_history() end, desc = 'Command History', },
     { '<leader>sC', function() Snacks.picker.commands() end, desc = 'Commands', },
     { '<leader>sd', function() Snacks.picker.diagnostics() end, desc = 'Diagnostics', },
@@ -111,8 +108,8 @@ return {
     { '<leader>bd', function() Snacks.bufdelete() end, desc = 'Delete Buffer', },
     { '<leader>cR', function() Snacks.rename.rename_file() end, desc = 'Rename File', },
     { '<leader>un', function() Snacks.notifier.hide() end, desc = 'Dismiss All Notifications', },
-    { '<c-/>', function() Snacks.terminal() end, desc = 'Toggle Terminal', },
-    { '<c-_>', function() Snacks.terminal() end, desc = 'which_key_ignore', },
+    -- { '<c-/>', function() Snacks.terminal() end, desc = 'Toggle Terminal', },
+    -- { '<c-_>', function() Snacks.terminal() end, desc = 'which_key_ignore', },
     { ']]', function() Snacks.words.jump(vim.v.count1) end, desc = 'Next Reference', mode = { 'n', 't' }, },
     { '[[', function() Snacks.words.jump(-vim.v.count1) end, desc = 'Prev Reference', mode = { 'n', 't' }, },
   },

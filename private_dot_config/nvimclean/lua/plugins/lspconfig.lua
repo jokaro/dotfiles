@@ -71,6 +71,10 @@ return {
             vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
           end
 
+          map('<leader>ca', vim.lsp.buf.code_action, 'Code Action', { 'n', 'v' })
+          map('<leader>cc', vim.lsp.codelens.run, 'Run Codelens', { 'n', 'v' })
+          map('<leader>cC', vim.lsp.codelens.refresh, 'Refresh & Display Codelens', { 'n' })
+          map('<leader>cr', vim.lsp.buf.rename, 'Rename')
           -- Rename the variable under your cursor.
           --  Most Language Servers support renaming across files, etc.
           -- map('grn', vim.lsp.buf.rename, '[R]e[n]ame')
@@ -219,6 +223,14 @@ return {
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
         --
+        vtsls = {},
+        eslint = {
+          experimental = {
+            useFlatConfig = true,
+          },
+        },
+        cssls = {},
+        cssmodules_ls = {},
 
         lua_ls = {
           -- cmd = { ... },
@@ -232,8 +244,18 @@ return {
               completion = {
                 callSnippet = 'Replace',
               },
-              -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
-              -- diagnostics = { disable = { 'missing-fields' } },
+              workspace = {
+                library = vim.api.nvim_get_runtime_file('', true),
+              },
+              telemetry = {
+                enable = false,
+              },
+              diagnostics = {
+                -- Get the language server to recognize the `vim` global
+                globals = { 'vim' },
+                -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
+                disable = { 'missing-fields' },
+              },
             },
           },
         },

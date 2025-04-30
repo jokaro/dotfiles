@@ -9,9 +9,9 @@ return {
       vim.keymap.set('n', '<F11>', '<cmd>lua require"dap".step_over()<CR>', { desc = 'DAP step over' })
       vim.keymap.set('n', '<F12>', '<cmd>lua require"dap".step_out()<CR>', { desc = 'DAP step out' })
       vim.keymap.set('n', '<F5>', function()
-        if vim.fn.filereadable '.vscode/launch.json' == 1 then
-          require('dap.ext.vscode').load_launchjs()
-        end
+        -- if vim.fn.filereadable '.vscode/launch.json' == 1 then
+        --   require('dap.ext.vscode').load_launchjs()
+        -- end
 
         require('dap').continue()
       end, { desc = 'DAP continue' })
@@ -37,44 +37,44 @@ return {
         require('dapui').close()
       end, {})
 
-      local node_debug_path = mason_registry.get_package('node-debug2-adapter'):get_install_path() .. '/out/src/nodeDebug.js'
-
-      dap.adapters.node2 = {
-        type = 'executable',
-        command = 'node',
-        args = {
-          node_debug_path,
-        },
-      }
-
-      dap.configurations.typescript = {
-        {
-          name = 'attach to typescript',
-          type = 'node2',
-          request = 'attach',
-          port = function()
-            return tonumber(vim.fn.input('Debug Port: ', '9229'))
-          end,
-          cwd = vim.fn.getcwd(),
-          sourceMaps = true,
-          skipFiles = { '<node_internals>/**', 'node_modules/**' },
-        },
-      }
-
-      dap.adapters.godot = {
-        type = 'server',
-        host = '127.0.0.1',
-        port = 6006,
-      }
-
-      dap.configurations.gdscript = {
-        {
-          type = 'godot',
-          request = 'launch',
-          name = 'launch main scene',
-          project = '${workspaceFolder}',
-        },
-      }
+      -- local node_debug_path = mason_registry.get_package('node-debug2-adapter'):get_install_path() .. '/out/src/nodeDebug.js'
+      --
+      -- dap.adapters.node2 = {
+      --   type = 'executable',
+      --   command = 'node',
+      --   args = {
+      --     node_debug_path,
+      --   },
+      -- }
+      --
+      -- dap.configurations.typescript = {
+      --   {
+      --     name = 'attach to typescript',
+      --     type = 'node2',
+      --     request = 'attach',
+      --     port = function()
+      --       return tonumber(vim.fn.input('Debug Port: ', '9229'))
+      --     end,
+      --     cwd = vim.fn.getcwd(),
+      --     sourceMaps = true,
+      --     skipFiles = { '<node_internals>/**', 'node_modules/**' },
+      --   },
+      -- }
+      --
+      -- dap.adapters.godot = {
+      --   type = 'server',
+      --   host = '127.0.0.1',
+      --   port = 6006,
+      -- }
+      --
+      -- dap.configurations.gdscript = {
+      --   {
+      --     type = 'godot',
+      --     request = 'launch',
+      --     name = 'launch main scene',
+      --     project = '${workspaceFolder}',
+      --   },
+      -- }
     end,
   },
   {
@@ -150,20 +150,6 @@ return {
           -- "python",   -- debugpy
           'delve', -- golang
           -- "codelldb", -- rust, c, c++
-        },
-      }
-    end,
-  },
-  {
-    'leoluz/nvim-dap-go',
-    dependencies = {
-      'mfussenegger/nvim-dap',
-      'rcarriga/nvim-dap-ui',
-    },
-    config = function()
-      require('dap-go').setup {
-        delve = {
-          build_flags = '-tags=dynamic',
         },
       }
     end,

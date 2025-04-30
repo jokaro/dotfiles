@@ -1,0 +1,4 @@
+[env]
+CYPRESS_REMOTE_DEBUGGING_PORT=9222
+GOPATH="{{env.HOME}}/go"
+GOPRIVATE="*.fnox.se"
